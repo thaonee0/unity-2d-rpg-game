@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
 
-    private float horizontal;
-    private bool isFacingRight = true; //to know player is facing left or right
+    //private float horizontal;
+    //private bool isFacingRight = true; //to know player is facing left or right
 
     private bool facingLeft = false;
 
@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerInput();
-        horizontal = Input.GetAxisRaw("Horizontal");
-        Flip();
+        // horizontal = Input.GetAxisRaw("Horizontal");
+        // Flip();
     }
-
+    /*
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
+    */
     private void FixedUpdate()
     {
         AdjustPlayerFacingDirection();
