@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8311345937993225293}
   - component: {fileID: 8863711622889586826}
-  - component: {fileID: 2388789170142886667}
   - component: {fileID: 8115560241115620166}
+  - component: {fileID: 2113440991936103114}
   m_Layer: 0
-  m_Name: Bush
+  m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4678654025521908183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9178216, y: -1.4971033, z: 0}
+  m_LocalPosition: {x: -1.934, y: -1.432, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7546672574d88be45bc67a34a347e290, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebd3046f319213b4cb880b4133d0bab7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,8 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &2388789170142886667
-CapsuleCollider2D:
+--- !u!114 &8115560241115620166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678654025521908183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e546aeaed8de8a459e041d9f73befe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyVFX: {fileID: 4537286844458448403, guid: 30f248c33b67faa48b8f05d5abee3d8e, type: 3}
+--- !u!60 &2113440991936103114
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -118,19 +131,30 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031234711, y: -0.031233974}
-  m_Size: {x: 0.9375327, y: 0.81260014}
-  m_Direction: 1
---- !u!114 &8115560241115620166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4678654025521908183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e546aeaed8de8a459e041d9f73befe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyVFX: {fileID: 4537286844458448403, guid: b091c9be07c76a8409a11252889e254e, type: 3}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.31218278, y: 0.5698116}
+      - {x: 0.25454795, y: 0.62754464}
+      - {x: -0.37883806, y: 0.6351246}
+      - {x: -0.44328547, y: 0.55616647}
+      - {x: -0.44433427, y: 0.073779106}
+      - {x: -0.76682377, y: 0.05127442}
+      - {x: -0.8007436, y: 0.0006952286}
+      - {x: -0.8007436, y: -0.7554703}
+      - {x: -0.7327733, y: -0.80621386}
+      - {x: 0.70309484, y: -0.72415996}
+      - {x: 0.76012456, y: -0.6710894}
+      - {x: 0.748919, y: 0.06297779}
+      - {x: 0.68711257, y: 0.12758446}
+      - {x: 0.32180858, y: 0.14594436}
+  m_UseDelaunayMesh: 0
