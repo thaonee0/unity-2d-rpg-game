@@ -11,6 +11,7 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     }
 
     private PlayerControls playerControls;
+    private float timeBetweenAttacks;
 
     private bool attackButtonDown, isAttacking = false;
 
@@ -30,6 +31,8 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     {
         playerControls.Combat.Attack.started += _ => StartAttacking();
         playerControls.Combat.Attack.canceled += _ => StopAttacking();
+
+        AttackCooldown();
     }
 
     private void Update()
@@ -40,6 +43,9 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     public void NewWeapon(MonoBehaviour newWeapon)
     {
         CurrentActiveWeapon = newWeapon;
+
+        AttackCooldown();
+        timeBetweenAttacks = (CurrentActiveWeapon as IWeapon).GetWeaponInfo().weaponCooldown;
     }
 
     public void WeaponNull()
@@ -47,9 +53,17 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
         CurrentActiveWeapon = null;
     }
 
-    public void ToggleIsAttacking(bool value)
+    public void AttackCooldown()
     {
-        isAttacking = value;
+        isAttacking = true;
+        StopAllCoroutines();
+        StartCoroutine(TimeBetweenAttacksRoutine());
+    }
+
+    private IEnumerator TimeBetweenAttacksRoutine()
+    {
+        yield return new WaitForSeconds(timeBetweenAttacks);
+        isAttacking = false;
     }
 
     private void StartAttacking()
@@ -66,7 +80,7 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     {
         if (attackButtonDown && !isAttacking)
         {
-            isAttacking = true;
+            AttackCooldown();
             (CurrentActiveWeapon as IWeapon).Attack();
         }
     }
