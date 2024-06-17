@@ -124,8 +124,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0337047, y: 0.0018620453}
-  m_Size: {x: 0.8048128, y: 0.7576287}
+  m_Offset: {x: 0.042777423, y: 0.0018620442}
+  m_Size: {x: 0.8894948, y: 0.7576319}
   m_Direction: 1
 --- !u!50 &1573064183650110521
 Rigidbody2D:
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a719d0ba1251c4a84047378ddb4dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirfloat: 2
 --- !u!95 &567551084921188403
 Animator:
   serializedVersion: 5
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 6723486212009266286, guid: 22f385249ad9b0744b5d402f322f9a42, type: 3}
+  knockBackThrust: 15
 --- !u!114 &6953859259994906462
 MonoBehaviour:
   m_ObjectHideFlags: 0
