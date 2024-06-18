@@ -41,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
 
+        ScreenShakeManager.Instance.ShakeScreen();
         knockBack.GetKnockedBack(hitTransform, knockBackThrustAmount);
         StartCoroutine(flash.FlashRoutine());
 
