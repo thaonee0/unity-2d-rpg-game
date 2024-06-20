@@ -22,9 +22,6 @@ public class PlayerController : Singleton<PlayerController>
     private KnockBack knockBack;
     private float startingMoveSpeed;
 
-    //private float horizontal;
-    //private bool isFacingRight = true; //to know player is facing left or right
-
     private bool facingLeft = false;
     private bool isDashing = false;
 

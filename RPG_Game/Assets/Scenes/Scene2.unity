@@ -3760,6 +3760,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6638979611533453645, guid: cfbe5c9d82299cc45ad9ef75628dda33, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.080149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638979611533453645, guid: cfbe5c9d82299cc45ad9ef75628dda33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.30496
+      objectReference: {fileID: 0}
     - target: {fileID: 8929350136088389346, guid: cfbe5c9d82299cc45ad9ef75628dda33, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -10851,6 +10859,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 12234529736841685, guid: 63d8cbc97ccf3804299b8f10ba74feb4, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 12234529736841685, guid: 63d8cbc97ccf3804299b8f10ba74feb4, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 696147240379909122, guid: 63d8cbc97ccf3804299b8f10ba74feb4, type: 3}
@@ -23211,45 +23223,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 560021134}
     m_Modifications:
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: stagger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: restTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: oscillate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: burstCount
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: angleSpread
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: bulletMoveSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: startingDistance
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: timeBetweenBursts
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4015872112824809039, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
-      propertyPath: projectilesPerBurst
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 4216748655610644602, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
       propertyPath: m_Name
       value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216748655610644602, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8358694019604643139, guid: 4f2db767ee5550949837dc56ed1d6662, type: 3}
       propertyPath: m_RootOrder
