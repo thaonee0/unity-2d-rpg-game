@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4168000966325293522}
   - component: {fileID: 6953859259994906462}
   - component: {fileID: 7992883374681453671}
+  - component: {fileID: 2044383978451011185}
   m_Layer: 0
   m_Name: BlueSlime
   m_TagString: Untagged
@@ -167,6 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamChangeDirfloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!95 &567551084921188403
 Animator:
   serializedVersion: 5
@@ -243,3 +248,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: 70f7f0dfab79d4849964ac2900b7012a, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &2044383978451011185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3281860463698872564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd286414912a5d94fb7cd15bcd253c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 4702981258319778248, guid: bdbb4010cb1e9b2458bb9233df1f248f, type: 3}
+  healthGlobe: {fileID: 4702981258319778248, guid: 401d63f83c3329a45a46fea0be74064c, type: 3}
+  staminaGlobe: {fileID: 4702981258319778248, guid: 59fe24a4ad45d894389d35d7730e5205, type: 3}
