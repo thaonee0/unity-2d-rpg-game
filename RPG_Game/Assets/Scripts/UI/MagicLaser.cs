@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MagicLaser : MonoBehaviour
 {
@@ -22,11 +23,15 @@ public class MagicLaser : MonoBehaviour
         LaserFaceMouse();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.GetComponent<Indestructible>() && !other.isTrigger)
         {
             isGrowing = false;
+        }
+        else if (other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject); 
         }
     }
 
