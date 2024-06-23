@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private float roamChangeDirfloat = 2f;
-    [SerializeField] private float attackRange = 5f;
+    [SerializeField] private float attackRange = 0f;
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private bool stopMovingWhileAttacking = false;
